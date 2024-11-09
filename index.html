@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buba AI</title>
+    <style>
+        /* Основные стили */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            background: linear-gradient(45deg, #3b3b98, #4834d4, #6a89cc, #8e44ad);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        /* Анимация градиента */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Стили заголовка и навигации */
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        nav a:hover {
+            color: #ffdd59;
+        }
+
+        /* Основная область */
+        .container {
+            max-width: 1000px;
+            margin: 80px auto 20px;
+            padding: 20px;
+        }
+
+        /* Разделы */
+        .section {
+            margin: 40px 0;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        /* Анимация появления и исчезновения */
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            color: #ffdd59;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        /* Стили кнопок */
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 20px;
+            background-color: #ffdd59;
+            color: #333;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .button:hover {
+            background-color: #ffd32a;
+        }
+
+        /* Секции установки */
+        .install-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .install-option {
+            flex: 1 1 45%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Подвал */
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Buba AI</h1>
+    <nav>
+        <a href="#main">Главная</a>
+        <a href="#details">Подробнее</a>
+        <a href="#install">Установить</a>
+        <a href="#telegram">Telegram-бот</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- Главная -->
+    <section id="main" class="section">
+        <h2>Преимущества Buba AI</h2>
+        <p>Что делает Buba AI вашим идеальным помощником? Это не просто чат-бот, а настоящая интеллектуальная система, которая всегда готова помочь вам. Вот некоторые преимущества, которые вы получите, используя Buba AI:</p>
+        <ul>
+            <li><strong>Умные ответы:</strong> Buba AI понимает контекст и отвечает не шаблонно, а адаптировано под ваш запрос. Ваши беседы всегда будут динамичными и естественными.</li>
+            <li><strong>Память о пользователе:</strong> Каждый разговор важен! Buba AI запоминает ключевые моменты ваших бесед, чтобы в следующий раз предложить вам еще более точные и персонализированные рекомендации.</li>
+            <li><strong>Многозадачность:</strong> Независимо от того, требуется ли вам помощь в работе или в личных делах, Buba AI справится с любой задачей и всегда под рукой.</li>
+            <li><strong>Гибкость интерфейса:</strong> Вы можете выбрать между стандартной версией без графического интерфейса и тестовой версией с красивым и удобным GUI. Buba AI адаптируется под ваши предпочтения.</li>
+            <li><strong>Постоянное совершенствование:</strong> Мы постоянно развиваем и обновляем Buba AI, добавляя новые возможности, улучшая функциональность и интерфейс.</li>
+        </ul>
+    </section>
+
+    <!-- Подробнее -->
+    <section id="details" class="section">
+        <h2>Подробная информация о Buba AI</h2>
+        <p>Buba AI - это не просто очередной ассистент. Это ваш личный интеллект, который поможет вам быть продуктивным, развлекаться и решать различные задачи. Он обучен работать в самых разных областях: от помощи с учебой до работы с вашим расписанием и личными проектами.</p>
+        <p><strong>Запоминающаяся и увлекательная беседа</strong>: Buba AI умеет вести диалог, как с другом. Его память позволяет удерживать контекст разговора, понимая ваши предпочтности и желания. Со временем, он становится все более похож на настоящего собеседника.</p>
+        <p><strong>Идеален для бизнеса</strong>: С помощью Buba AI можно автоматизировать многие процессы в бизнесе. Он поможет вам отвечать на запросы клиентов, организовать информацию и решить многие другие задачи.</p>
+        <p><strong>Поддержка множества форматов:</strong> Buba AI не ограничивается только текстовыми сообщениями. Он может работать с изображениями, аудио и видео, анализируя их и давая вам полезную информацию(beta).</p>
+        <p><strong>Быстрая интеграция:</strong> Buba AI легко интегрируется в различные приложения, как на мобильных устройствах, так и в браузерах(now off). Вы можете использовать его в любом месте и в любое время.</p>
+    </section>
+
+    <!-- Установить -->
+    <section id="install" class="section">
+        <h2>Установить Buba AI</h2>
+        <p>Теперь вы можете скачать и установить Buba AI. Выберите версию, которая подходит именно вам:</p>
+        <div class="install-options">
+            <div class="install-option">
+                <h3>Buba AI (beta)</h3>
+                <p>Эта версия без улучшенного графического интерфейса. Подходит для пользователей, которым достаточно текстового общения и не нужны дополнительные визуальные элементы. Легкая и быстрая установка.</p>
+                <a href="#" class="button" id="download-no-gui">Скачать</a>
+            </div>
+            <div class="install-option">
+                <h3>Buba AI (beta + GUI)</h3>
+                <p>Версия с графическим интерфейсом, которая предлагает улучшенный пользовательский опыт. Идеальна для тех, кто хочет не только получать ответы, но и наслаждаться красивым и удобным дизайном.</p>
+                <a href="#" class="button" id="download-with-gui">Скачать</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Telegram-бот -->
+    <section id="telegram" class="section">
+        <h2>Buba AI в Telegram</h2>
+        <p>Подключайтесь к Buba AI в Telegram, чтобы получать ответы и помощь в реальном времени. Buba AI всегда рядом и готов помочь вам в любой ситуации. С ним вы можете не только общаться, но и получать полезные советы и информацию.</p>
+        <a href="https://t.me/buba_robot" class="button" target="_blank">Перейти в Telegram</a>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2024 Buba AI. Все права защищены.</p>
+</footer>
+
+<script>
+    // Скрипт для скачивания файлов с Mega
+    document.getElementById('download-no-gui').addEventListener('click', function() {
+        window.open('https://mega.nz/file/mUFHSLiA#KgSwlBT4HFPQueT-XjZ_shxlhstfPM25YzWvgYhK-fc', '_blank');
+    });
+
+    document.getElementById('download-with-gui').addEventListener('click', function() {
+        window.open('https://mega.nz/file/TdMCiQIT#IDpPeDBe-Ve11TC7AeeGyomKQ_vpTO4XOnxhuN1ptOs', '_blank');
+    });
+
+    // Функция для проверки видимости элементов
+    function checkVisibility() {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                section.classList.add('visible');
+            } else {
+                section.classList.remove('visible');
+            }
+        });
+    }
+
+    // Проверка видимости при загрузке страницы
+    window.addEventListener('load', checkVisibility);
+
+    // Проверка видимости при прокрутке страницы
+    window.addEventListener('scroll', checkVisibility);
+</script>
+
+</body>
+</html>
